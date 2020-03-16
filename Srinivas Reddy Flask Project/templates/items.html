@@ -1,0 +1,25 @@
+
+{% extends 'home.html'%}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  
+	<title>Show Items</title>
+</head>
+<body>
+<center>
+{% for item in items %}
+<h1>Brand Name:{{item.brand}}</h1>
+<h1>Model Name:{{item.model}}</h1>
+<h1>Image:</h1><img src="{{item.url}}" alt="Card image" style="width:10%">
+<h1>Cost:{{item.cost}}</h1>
+<h1>Description:{{item.description}}</h1>
+<a href="{{url_for('edititem',item_id=item.id)}}">Edit</a><br>
+<a href="{{url_for('deleteitem',item_id=item.id)}}">Delete</a>
+{% endfor%}
+</center>
+</body>
+</html>
+{% endblock %} 
+ 

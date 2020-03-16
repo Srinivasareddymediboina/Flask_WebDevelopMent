@@ -1,0 +1,25 @@
+{% extends 'home.html'%}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+
+</style>
+	<title>Add Item</title>
+</head>
+<body>
+	<form action="{{url_for('edititem',item_id=item.id)}}" method="POST">
+	<center>
+	<h1>Add Item</h1>
+	Branad Name:<br><input type="text" name="brand" value="{{item.brand}}"><br>
+	Model Name:<br><input type="text" name="model" value="{{item.model}}"><br>
+	Image Url:<br><input type="text" name="image" value="{{item.url}}"><br>
+	Item Cost:<br><input type="text" name="cost" value="{{item.cost}}"><br>
+	Item Description:<br><textarea name="description" value="{{item.description}}"></textarea><br>
+	<input type="submit" value="Submit">
+	</center>
+	</form>
+
+</body>
+</html>
+{% endblock %} 

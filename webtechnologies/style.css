@@ -1,0 +1,30 @@
+.head1{
+	color:green;
+}
+.head2{
+	color:yellow;
+}
+.head3{
+	color:orange
+}
+.bt1{
+	color:red;
+}
+.bt2{
+	color:purple;
+}
+body{
+	background-image:url('b.jpg');
+	background-repeat:no-repeat;
+	background-size:100%;
+}
+h1{
+color:red;
+}
+h3{
+color:green;
+}
+p{
+color:yellow;
+}
+

@@ -1,0 +1,24 @@
+
+{% extends 'home.html'%}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+</head>
+<body>
+	<form action="{{url_for('register')}}" method="POST" enctype="multipart/form-data">
+	<center>
+	<h1>STUDENT REGISTRATION FORM</h1>
+	Name:<br><input type="text" name="name"><br>
+	Email:<br><input type="email" name="email"><br>
+	Choose file...:<br><input type="file" name="file"><br>
+	Password:<br><input type="password" name="password"><br>
+	<input type="submit" value="SIGNUP">
+	</center>
+	</form>
+
+</body>
+</html>
+{% endblock %} 
+ 

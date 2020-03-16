@@ -1,0 +1,23 @@
+{% extends 'home.html'%}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Item</title>
+</head>
+<body>
+	<form action="{{url_for('newitem')}}" method="POST">
+	<center>
+	<h1>Add Item</h1>
+	Branad Name:<br><input type="text" name="brand"><br>
+	Model Name:<br><input type="text" name="model"><br>
+	Image Url:<br><input type="text" name="image"><br>
+	Item Cost:<br><input type="text" name="cost"><br>
+	Item Description:<br><textarea name="description"></textarea><br>
+	<input type="submit" value="Submit">
+	</center>
+	</form>
+
+</body>
+</html>
+{% endblock %} 
