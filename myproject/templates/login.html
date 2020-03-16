@@ -1,0 +1,28 @@
+<!-- login.html -->
+{% extends 'home.html' %}
+{% block content %}
+<style>
+  .bg{
+    background-color: #fa8;
+  }
+</style>
+  <div class="container col-md-6 offset-3 pt-2">
+    <div class="border rounded bg" id="bg">
+      <center><u><b><h1>Login Form</h1></b></u></center>
+      <!-- This html file don't image upload so no need of 'enctype="multipart/form-data"' -->
+        <form action="#" class="m-5" method="POST">
+          
+	       	<div class="form-group">
+	            <label for="email">Email ID*</label>
+	            <input type="email" class="form-control" name="email" id="email" required placeholder="Enter Your Email Address Here">
+	        </div>          
+	        <div class="form-group">
+	            <label for="password">Password*</label>
+	            <input type="password" class="form-control" name="password" id="password" required placeholder="Enter Your Password Here">
+	        </div>
+	        <input type="submit" value="Login" class="btn btn-info btn-block">
+    	</form>
+  	</div>
+</div>
+
+{% endblock %}

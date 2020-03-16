@@ -1,0 +1,43 @@
+<!-- newitem.html -->
+{% extends 'home.html' %}
+{% block content %}
+<style>
+  .bg{
+    background-color: #9d7;
+  }
+</style>
+  <div class="container col-md-6 offset-3 pt-2">
+    <div class="border rounded bg" id="bg">
+      <center><u><b><h1>Edit Item</h1></b></u></center>
+      <!-- This html file have file upload so needed to add 'enctype="multipart/form-data"' -->
+        <form action="{{url_for('edititem', item_id=item.id)}}" class="m-5" method="POST">         
+	       	<div class="form-group">
+	            <label for="brand">Brand Name*</label>
+	            <input type="text" class="form-control" name="brand" id="brand" value="{{item.brand}}">
+	        </div>          
+	        <div class="form-group">
+	            <label for="password">Model Name*</label>
+	            <input type="text" class="form-control" name="model" id="model" value="{{item.name}}">
+	        </div>
+	        <div class="form-group">
+	            <label for="image">Image URL*</label>
+	            <input type="text" class="form-control" name="image" id="image" value="{{item.url}}">
+	        </div>
+	        <div class="form-group">
+	            <label for="cost">Item Cost*</label>
+	            <input type="number" class="form-control" name="cost" id="cost" value="{{item.cost}}">
+	        </div>
+	        <div class="form-group">
+	            <label for="description">Item Description*</label>
+	            <textarea rows="5" class="form-control" name="description" value="{{item.description}}" ></textarea>
+	        </div>
+	        <input type="submit" value="Update Your Item" class="btn btn-success btn-block">
+    	</form>
+  	</div>
+</div>
+
+
+
+
+
+{% endblock %}

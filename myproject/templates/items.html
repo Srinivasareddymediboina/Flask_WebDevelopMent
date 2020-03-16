@@ -1,0 +1,37 @@
+{%extends 'home.html'%}
+{% block content%}
+<style>
+.bg{
+	background-color:  #ADD8E6;
+}
+</style>
+<div class="container  pt-3">
+  <h1 style="color: Red"><center>Show Items</center></h1>
+  <div class="col-md-12">
+    <div class="row d-flex justify-content-between">
+      {% for item in items %}
+      <div class="col-sm-3 mt-3" style="width: 100%;">
+        <div class="card  bg"id=bg>
+           <div class="card-header">
+            <h4 class="card-title text-success">{{item.brand}}</h4>
+           </div>
+          <img class="card-img-top" src="{{item.url}}" alt="Card image" style="width:100%">
+         <!-- <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="{{item.image}}" allowfullscreen></iframe>
+          </div>-->
+    <!-- <div class="card-body" style="width: 150%">
+      <button type="button" class="btn btn-info" data-toggle="collapse" title="Click More Details" data-target="#demo{{ item.id }}">Details</button>
+      <div id="demo{{ item.id }}" class="collapse" style="position: absolute; z-index: 1;background: #A9DFBF;padding: 8px;box-shadow: 0px 0px 4px #FF334F;">  -->
+      <p class="card-text"><h5 class="text-danger">Model:-{{item.model}}</h5></p>
+      <p class="card-text"><h5 class="text-info">Cost:-{{item.cost}}</h5></p>
+      <p class="card-text"><h5 class="text-warning">Description:-{{item.description}}</h5></p>
+      <a href="{{url_for('edititem', item_id=item.id)}}" class="btn btn-success">Edit</a>
+      <a href="{{url_for('deleteitem', item_id=item.id)}}" class="btn btn-danger">Delete</a>
+      </div>
+      </div>
+      </div>
+      {% endfor%}
+    </div>
+  </div>
+</div>
+{%endblock%}

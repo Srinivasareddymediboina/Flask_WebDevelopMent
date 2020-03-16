@@ -1,0 +1,58 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand navbar-dark bg-dark">
+		<a href="{{url_for('home')}}" class="navbar-brand">
+			<!-- image link should be end with extentaion(.gif/.jpeg/.jpg/.png) -->
+			<img src="https://i.pinimg.com/originals/63/5f/c0/635fc050a514af69dff528e653008590.gif" alt="logo" style="height: 30px;width: 30px;">
+		</a>
+		
+		<!-- Create left side menu options/links in Navgation Bar -->
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="{{url_for('newitem')}}" >
+					New Item
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#" >
+					File Upload
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{{url_for('items')}}" >
+					Stored Data
+				</a>
+			</li>
+		</ul>
+
+		<!-- Create Right side menu options/links in Navgation Bar -->
+		<ul class="navbar-nav navbar-right">
+			<li class="nav-item">
+				<a href="{{url_for('register')}}" class="nav-link">
+					Register
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="{{url_for('login')}}" class="nav-link">
+					Login
+				</a>
+			</li>
+		</ul>
+	</nav>
+	{% block content %}
+	{# other html files code is appended b/w "block content" & "endblock" like(register.html / login.html/newitem.html/etc)#}
+	{# endblock --> don't have spaces #}
+	{% endblock%}
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends 'home.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete Item</title>
+</head>
+<body>
+	<form action="{{url_for('deleteitem',item_id=item.id)}}" method="post">
+		<p>Are You want sure to delete this item-<strong>{{item.id}}</strong></p>
+		<button type="submit" id="submit">Delete</button>
+		<a href="{{url_for('home',item_id=item.id)}}"></a>
+		<button type="submit" id="submit">Cancel</button>
+	</form>
+
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+input{
+  width:82%;
+  padding: 1%;
+}
+
+.container{
+  padding: 1%;
+  margin: 1%;
+}
+
+.rdbtn{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+
+.registerbtn{
+  background-color: green;
+  color: black;
+  font-size: 30px;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.registerbtn:hover{
+  opacity: 200;
+}

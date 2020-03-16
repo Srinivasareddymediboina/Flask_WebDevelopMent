@@ -1,0 +1,43 @@
+<!-- newitem.html -->
+{% extends 'home.html' %}
+{% block content %}
+<style>
+  .bg{
+    background-color: #9d7;
+  }
+</style>
+  <div class="container col-md-6 offset-3 pt-2">
+    <div class="border rounded bg" id="bg">
+      <center><u><b><h1>New Item Form</h1></b></u></center>
+      <!-- This html file have file upload so needed to add 'enctype="multipart/form-data"' -->
+        <form action="#" class="m-5" method="POST">         
+	       	<div class="form-group">
+	            <label for="brand">Brand Name*</label>
+	            <input type="text" class="form-control" name="brand" id="brand" required placeholder="Enter Your Item Brand Here">
+	        </div>          
+	        <div class="form-group">
+	            <label for="password">Model Name*</label>
+	            <input type="text" class="form-control" name="model" id="model" required placeholder="Enter Your Item Model Name Here">
+	        </div>
+	        <div class="form-group">
+	            <label for="image">Image URL*</label>
+	            <input type="text" class="form-control" name="image" id="image" required placeholder="Enter Your Item Image URL Here">
+	        </div>
+	        <div class="form-group">
+	            <label for="cost">Item Cost*</label>
+	            <input type="number" class="form-control" name="cost" id="cost" required placeholder="Enter Your Item Cost Here">
+	        </div>
+	        <div class="form-group">
+	            <label for="description">Item Description*</label>
+	            <textarea rows="5" class="form-control" name="description"></textarea>
+	        </div>
+	        <input type="submit" value="Save Your Item" class="btn btn-success btn-block">
+    	</form>
+  	</div>
+</div>
+
+
+
+
+
+{% endblock %}
